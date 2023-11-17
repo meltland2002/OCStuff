@@ -19,3 +19,4 @@ elseif opts[1] == "ocstuff" then
   print("Done! Check to see if file downloaded correctly.")
 else
   print("INVALID COMMAND: " .. opts[1] .. "\n\n" ..help)
+end

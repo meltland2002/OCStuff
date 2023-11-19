@@ -5,7 +5,7 @@ local opts = shell.parse(...)
 
 local ghurl = "https://raw.githubusercontent.com/"
 local ocstuff = ghurl .. "meltland2002/OCStuff/main/"
-local help = "ghdl help - shows this message\nghdl dl <user>/<repo>/<branch>/<path/to/file.txt> </download/to/path.txt> - downloads a raw github file to a path\nghdl ocstuff <path/to/file.txt> </download/to/path.txt> - downloads a raw github file from melt's ocstuff repo"
+local help = "ghdl help - shows this message\nghdl dl <user>/<repo>/<branch>/<path/to/file.txt> </download/to/path.txt> - downloads a raw github file to a path\nghdl ocstuff <path/to/file.txt> </download/to/path.txt> - downloads a raw github file from melt's ocstuff repo\nghdl mineos - downloads mineos bios and flashes it"
 
 if opts[1] == nil then
   print(help)

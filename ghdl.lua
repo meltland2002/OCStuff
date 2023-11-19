@@ -17,6 +17,12 @@ elseif opts[1] == "ocstuff" then
   print("Attempting to download " .. ocstuff .. opts[2] .. " to " .. opts[3] .. "...")
   os.execute("wget -f \"" .. ocstuff .. opts[2] .. "\" \"" .. opts[3] .."\"")
   print("Done! Check to see if file downloaded correctly.")
+elseif opts[1] == "mineos" then
+  print("Attempting to download " .. ghurl .. "IgorTimofeev/MineOS/master/Installer/BIOS.lua to /tmp/bios.lua...")
+  os.execute("wget -f \"" .. ghurl .. "IgorTimofeev/MineOS/master/Installer/BIOS.lua\" \"/tmp/bios.lua\"")
+  print("Done! Flashing...")
+  os.execute("flash -q /tmp/bios.lua")
+  print("Done! You may now reboot.")
 else
   print("INVALID COMMAND: " .. opts[1] .. "\n\n" ..help)
 end
